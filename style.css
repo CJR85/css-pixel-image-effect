@@ -30,6 +30,7 @@ body {
 
 .box.pixel img {
   image-rendering: pixelated;
+  filter: contrast(1.4);
 }
 
 .box.pixel::before {
