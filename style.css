@@ -31,3 +31,29 @@ body {
 .box.pixel img {
   image-rendering: pixelated;
 }
+
+.box.pixel::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background: repeating-linear-gradient(
+      0deg,
+      #0006 0%,
+      #0006 4%,
+      transparent 4%,
+      transparent 96%,
+      #0006 100%
+    ),
+    repeating-linear-gradient(
+      90deg,
+      #0006 0%,
+      #0006 4%,
+      transparent 4%,
+      transparent 96%,
+      #0006 100%
+    );
+
+  background-size: 10px 10px;
+}
